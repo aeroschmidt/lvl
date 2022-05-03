@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 Route::get('/', function () {
-    return view('welcome');
+    $nomes = ["Joao", "Maria", "Joana", "Bento"];
+    $nome = "Um nome qualquer";
+    $idade = 45;
+    $array =[1,2,3,4,5];
+    return view('welcome', ['nomes' => $nomes,'nome' => $nome, 'idade' => $idade, 'array' => $array]);
 });
