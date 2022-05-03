@@ -18,7 +18,9 @@ Route::get('/contact', function () {
 });
 
 Route::get('/', function () {
-    $nome = "Um nome qualquer ";
+    $nomes = ["Joao", "Maria", "Joana", "Bento"];
+    $nome = "Um nome qualquer";
     $idade = 45;
-    return view('welcome', ['nome' => $nome, 'idade' => $idade]);
+    $array =[1,2,3,4,5];
+    return view('welcome', ['nomes' => $nomes,'nome' => $nome, 'idade' => $idade, 'array' => $array]);
 });
