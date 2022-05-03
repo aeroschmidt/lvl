@@ -11,8 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <style>
-    </style>
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- JS -->
+    <script src="/js/scripts.js"></script>
+
 </head>
 
 <body class="antialiased">
@@ -30,6 +33,13 @@
     @foreach($nomes as $nomes2)
         <p> {{-- Variavel de loop no blade --}}{{$loop -> index}} - {{$nomes2}}</p>
     @endforeach
+
+
+    <figure>
+        <img src="/img/imagem.jpg" alt="Minha Figura">
+        <figcaption></figcaption>
+      </figure>
+
 </body>
 
 </html>
