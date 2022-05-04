@@ -7,6 +7,14 @@ License: GNU General Public License
 License URI: license.txt
 */
 
+
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Roboto:wght@100&display=swap');
 p {
     color: red;
+}
+
+* {
+    font-family: 'Josefin Sans';
 }

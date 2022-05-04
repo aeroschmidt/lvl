@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.main')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('title', 'Pagina principal')
 
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="/css/styles.css">
-
-    <!-- JS -->
-    <script src="/js/scripts.js"></script>
-
-</head>
-
-<body class="antialiased">
+@section('content')
+    
     @if ($nome == 'Pedro')
         <p>O nome é Pedro</p>
     @else
@@ -40,6 +25,4 @@
         <figcaption></figcaption>
       </figure>
 
-</body>
-
-</html>
+    @endsection
