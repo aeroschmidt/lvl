@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.main')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('title', 'Pagina principal')
 
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <style>
-    </style>
-</head>
-
-<body class="antialiased">
+@section('content')
+    
     @if ($nome == 'Pedro')
         <p>O nome é Pedro</p>
     @else
@@ -30,6 +18,11 @@
     @foreach($nomes as $nomes2)
         <p> {{-- Variavel de loop no blade --}}{{$loop -> index}} - {{$nomes2}}</p>
     @endforeach
-</body>
 
-</html>
+
+    <figure>
+        <img src="/img/imagem.jpg" alt="Minha Figura">
+        <figcaption></figcaption>
+      </figure>
+
+    @endsection
