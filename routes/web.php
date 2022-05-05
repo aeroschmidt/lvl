@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,23 +18,9 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/', function () {
-    $nomes = ["Joao", "Maria", "Joana", "Bento"];
-    $nome = "Um nome qualquer";
-    $idade = 45;
-    $array =[1,2,3,4,5];
-    return view('welcome', ['nomes' => $nomes,'nome' => $nome, 'idade' => $idade, 'array' => $array]);
-});
-
-/* Busca por parametros */
-Route::get('/produtos', function () {
-    $busca = request('search');
-    return view('products', ['busca' => $busca]);
-});
-
-
-/* Aqui permite a passagem de um parametro vazio */
-Route::get('/produtos_teste/{id?}', function ($id = null) {
-    /* Nome da view*/
-    return view('product', ['id' => $id]);
-});
+/* Acessando controller */
+Route::get('/', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
+Route::get('/contact', [EventController::class, 'contact']);
+Route::get('/produtos', [EventController::class, 'products']);
+Route::get('/produtos_teste/{id?}', [EventController::class, 'product']);
