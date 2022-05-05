@@ -24,3 +24,16 @@ Route::get('/', function () {
     $array =[1,2,3,4,5];
     return view('welcome', ['nomes' => $nomes,'nome' => $nome, 'idade' => $idade, 'array' => $array]);
 });
+
+/* Busca por parametros */
+Route::get('/produtos', function () {
+    $busca = request('search');
+    return view('products', ['busca' => $busca]);
+});
+
+
+/* Aqui permite a passagem de um parametro vazio */
+Route::get('/produtos_teste/{id?}', function ($id = null) {
+    /* Nome da view*/
+    return view('product', ['id' => $id]);
+});

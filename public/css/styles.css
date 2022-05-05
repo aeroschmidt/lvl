@@ -18,3 +18,7 @@ p {
 * {
     font-family: 'Josefin Sans';
 }
+
+#navbar img {
+    width: 10em;
+}
