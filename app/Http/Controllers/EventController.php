@@ -21,13 +21,4 @@ class EventController extends Controller
     public function contact(){
         return view('contact');
     }
-
-    public function products(){
-        $busca = request('search');
-        return view('products', ['busca' => $busca]);
-    }
-
-    public function product($id = null){
-         return view('product', ['id' => $id]);
-    }
 }
