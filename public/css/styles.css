@@ -12,7 +12,7 @@ License URI: license.txt
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Roboto:wght@100&display=swap');
 p {
-    color: red;
+    color: ghostwhite;
 }
 
 body {
@@ -86,6 +86,23 @@ header {
 #search-container form {
     width: 50%;
     margin: 0 auto;
+}
+
+
+/*Event create page*/
+
+#event-create-container {
+    padding: 30px;
+}
+
+#event-create-container label {
+    font-weight: bold;
+}
+
+#event-create-container input,
+#event-create-container select,
+#event-create-container textarea {
+    font-size: 1rem;
 }
 
 
