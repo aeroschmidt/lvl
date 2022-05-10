@@ -6,8 +6,13 @@
 
     <div id="event-create-container" class="col-md-6 offset-md-3">
         <h1>Crie seu evento </h1>
-        <form action="/events" method="POST">
-            @csrf <!-- Padrão blade para ataques a formularios -->
+        <form action="/events" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+                <label for="image">Imagem do evento:</label>
+                <input type="file" name="image" id="image" class="form-control-file" title="Imagem do evento">
+            </div>
+            <!-- Padrão blade para ataques a formularios -->
             <div class="form-group">
                 <label for="title">Evento:</label>
                 <input type="text" name="title" id="title" class="form-control" placeholder="Nome do evento">
