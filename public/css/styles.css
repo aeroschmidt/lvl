@@ -44,6 +44,15 @@ header {
     border-color: #C28008;
 }
 
+.msg {
+    background-color: #FFF;
+    color: green;
+    width: 100%;
+    border: 1px solid white;
+    text-align: center;
+    background: lightgreen;
+}
+
 
 /* navbar */
 
