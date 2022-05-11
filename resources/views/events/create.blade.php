@@ -35,9 +35,7 @@
             </div>
             <br>
             <input type="submit" class="btn btn-primary" value="Criar Evento">
-
         </form>
-
     </div>
 
 @endsection
